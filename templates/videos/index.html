@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load embed_video_tags %}
+{% load static %}
+
+
+{% block content %}
+    <h1 class="mb-5">Project</h1>
+{#    <a href="https://pixabay.com/images/search/nature/" target="_blank">#}
+{#    <img src ="{{ static() }}" width="400px" height="300px">#}
+{#    <img src="{% static '../../obama.jpg' %}" alt="My image">#}
+
+
+
+{#    <figure><img src= "{% static 'obama.jpg' %}" alt="Obama" width="260" height="300"> <figcaption>Obama</figcaption> </figure>#}
+   
+    {% for item in videos %}
+        <div class="row">
+            <div style="font-weight: bold">
+                {{ item.title }}
+            </div>
+            {% video item.url '426x240' %}
+            {{abc}}
+        </div>
+
+    {% endfor %}
+{% endblock %}

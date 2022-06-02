@@ -1,0 +1,126 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+
+<title>Django Project</title>
+<meta charset="utf-8">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel ="stylesheet" href="style.css" type="text/css">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style type="text/css">
+      .Hide{
+        display:none;
+      }
+      .Show{
+        display:inline;
+      }
+    </style>
+</head>
+
+<body>
+<div class="container ">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light row" >
+  <a class="navbar-brand col" href="#">Project.</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse mr-0" id="navbarNavAltMarkup">
+    <div class="navbar-nav col-9">
+      <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">What's New</a>
+      <a class="nav-item nav-link" href="#">Profile</a>
+
+
+
+    </div>
+      <div class="my-2 my-lg-0 col">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-display-fill my-2 my-sm-0 mr-4 Hide" viewBox="0 0 16 16" id="devON">
+  <path d="M6 12c0 .667-.083 1.167-.25 1.5H5a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-.75c-.167-.333-.25-.833-.25-1.5h4c2 0 2-2 2-2V4c0-2-2-2-2-2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h4z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-display-fill my-2 my-sm-0 mr-4 Hide" viewBox="0 0 16 16" id="devOFF">
+  <path d="M6 12c0 .667-.083 1.167-.25 1.5H5a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1h-.75c-.167-.333-.25-.833-.25-1.5h4c2 0 2-2 2-2V4c0-2-2-2-2-2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h4z"/>
+</svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill= "green"  class="bi bi-earbuds mr-4" id="HeadON" viewBox="0 0 16 16" >
+  <path fill-rule="evenodd" d="M6.825 4.138c.596 2.141-.36 3.593-2.389 4.117a4.432 4.432 0 0 1-2.018.054c-.048-.01.9 2.778 1.522 4.61l.41 1.205a.52.52 0 0 1-.346.659l-.593.19a.548.548 0 0 1-.69-.34L.184 6.99c-.696-2.137.662-4.309 2.564-4.8 2.029-.523 3.402 0 4.076 1.948zm-.868 2.221c.43-.112.561-.993.292-1.969-.269-.975-.836-1.675-1.266-1.563-.43.112-.561.994-.292 1.969.269.975.836 1.675 1.266 1.563zm3.218-2.221c-.596 2.141.36 3.593 2.389 4.117a4.434 4.434 0 0 0 2.018.054c.048-.01-.9 2.778-1.522 4.61l-.41 1.205a.52.52 0 0 0 .346.659l.593.19c.289.092.6-.06.69-.34l2.536-7.643c.696-2.137-.662-4.309-2.564-4.8-2.029-.523-3.402 0-4.076 1.948zm.868 2.221c-.43-.112-.561-.993-.292-1.969.269-.975.836-1.675 1.266-1.563.43.112.561.994.292 1.969-.269.975-.836 1.675-1.266 1.563z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill= "red"  class="bi bi-earbuds mr-4 Hide" id="HeadOFF" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M6.825 4.138c.596 2.141-.36 3.593-2.389 4.117a4.432 4.432 0 0 1-2.018.054c-.048-.01.9 2.778 1.522 4.61l.41 1.205a.52.52 0 0 1-.346.659l-.593.19a.548.548 0 0 1-.69-.34L.184 6.99c-.696-2.137.662-4.309 2.564-4.8 2.029-.523 3.402 0 4.076 1.948zm-.868 2.221c.43-.112.561-.993.292-1.969-.269-.975-.836-1.675-1.266-1.563-.43.112-.561.994-.292 1.969.269.975.836 1.675 1.266 1.563zm3.218-2.221c-.596 2.141.36 3.593 2.389 4.117a4.434 4.434 0 0 0 2.018.054c.048-.01-.9 2.778-1.522 4.61l-.41 1.205a.52.52 0 0 0 .346.659l.593.19c.289.092.6-.06.69-.34l2.536-7.643c.696-2.137-.662-4.309-2.564-4.8-2.029-.523-3.402 0-4.076 1.948zm.868 2.221c-.43-.112-.561-.993-.292-1.969.269-.975.836-1.675 1.266-1.563.43.112.561.994.292 1.969-.269.975-.836 1.675-1.266 1.563z"/>
+</svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-person-check-fill" viewBox="0 0 16 16" >
+  <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-person-check-fill Hide" viewBox="0 0 16 16" >
+  <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+
+            </div>
+  </div>
+</nav>
+
+
+    <div class="" style="display: flex" >
+        <div class="">
+            {%  block content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+   $(document).ready(()=>{
+    setInterval(() => {fetch('/device')
+  .then(response => response.json())
+  .then(data =>{
+    console.log(data);
+    if (data.flag===true){
+      $("#devON").removeClass('Hide').addClass('Show');
+      $("#devOFF").removeClass('Show').addClass('Hide');
+    }
+    else{
+      $("#devOFF").removeClass('Hide').addClass('Show');
+      $("#devON").removeClass('Show').addClass('Hide');
+    }
+  });}, 1000);  
+});
+   
+
+$(document).ready(()=>{
+    setInterval(() => {fetch('/audio')
+  .then(response => response.json())
+  .then(data =>{
+    console.log(data);
+    if (data.audio_flag===true){
+      $("#HeadON").removeClass('Hide').addClass('Show');
+      $("#HeadOFF").removeClass('Show').addClass('Hide');
+    }
+    else{
+      $("#HeadOFF").removeClass('Hide').addClass('Show');
+      $("#HeadON").removeClass('Show').addClass('Hide');
+    }
+  });}, 1000);  
+});
+
+
+
+</script>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
